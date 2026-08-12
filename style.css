@@ -195,6 +195,14 @@ footer{background:#080d16;color:#fff;padding:50px 5vw 25px}
 }
 
 /* MEMBER PHOTOS + CHEKI MEMBER CHOOSER */
+.member-photo a{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  display:block;
+  cursor:pointer;
+}
+
 .member-photo img{
   position:absolute;
   inset:0;
@@ -203,6 +211,34 @@ footer{background:#080d16;color:#fff;padding:50px 5vw 25px}
   object-fit:cover;
   object-position:center top;
   transition:transform .7s ease, filter .7s ease;
+  cursor:pointer;
+}
+
+.member-photo:before{
+  z-index:1;
+  background:linear-gradient(
+    180deg,
+    rgba(0,0,0,.05),
+    transparent 45%,
+    rgba(0,0,0,.82)
+  );
+  pointer-events:none;
+}
+
+.member-photo:after{
+  z-index:1;
+  pointer-events:none;
+}
+
+.member-photo span,
+.member-photo small{
+  z-index:3;
+  pointer-events:none;
+}
+
+.member-photo:hover img{
+  transform:scale(1.055);
+  filter:saturate(1.05);
 }
 .member-photo:before{z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.05),transparent 45%,rgba(0,0,0,.82));}
 .member-photo:after{z-index:1;}
