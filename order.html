@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Order Cheki — DELUNA IDOL</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+</head>
+
+<body>
+
+    <main class="order-page">
+
+        <div class="order-container">
+
+            <div class="order-header">
+
+                <span>DELUNA IDOL</span>
+
+                <h1>
+                    ORDER CHEKI
+                </h1>
+
+                <p>
+                    Choose your favorite member
+                </p>
+
+            </div>
+
+
+            <form id="orderForm">
+
+                <!-- MEMBER -->
+
+                <div class="form-group">
+
+                    <label>
+                        Pilih Member
+                    </label>
+
+                    <select
+                        id="member"
+                        required
+                    >
+
+                        <option value="">
+                            Pilih member
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PRODUCT -->
+
+                <div class="form-group">
+
+                    <label>
+                        Jenis Cheki
+                    </label>
+
+                    <select
+                        id="productType"
+                        required
+                    >
+
+                        <option value="">
+                            Pilih jenis Cheki
+                        </option>
+
+                        <option
+                            value="Solo"
+                            data-price="25000"
+                        >
+                            Solo — Rp25.000
+                        </option>
+
+                        <option
+                            value="Group"
+                            data-price="30000"
+                        >
+                            Group — Rp30.000
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- QUANTITY -->
+
+                <div class="form-group">
+
+                    <label>
+                        Jumlah
+                    </label>
+
+                    <div class="quantity">
+
+                        <button
+                            type="button"
+                            id="minus"
+                        >
+                            −
+                        </button>
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            value="1"
+                            min="1"
+                            max="20"
+                            readonly
+                        >
+
+                        <button
+                            type="button"
+                            id="plus"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label>
+                        Nama
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Nama kamu"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- WHATSAPP -->
+
+                <div class="form-group">
+
+                    <label>
+                        WhatsApp
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="whatsapp"
+                        placeholder="08xxxxxxxxxx"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- NOTE -->
+
+                <div class="form-group">
+
+                    <label>
+                        Catatan
+                    </label>
+
+                    <textarea
+                        id="note"
+                        rows="4"
+                        placeholder="Catatan tambahan..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- TOTAL -->
+
+                <div class="total-box">
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                    <strong id="total">
+                        Rp0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="order-button"
+                    id="submitButton"
+                >
+                    ORDER SEKARANG
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/config.js"></script>
+
+    <script src="js/order.js"></script>
+
+</body>
+
+</html>
