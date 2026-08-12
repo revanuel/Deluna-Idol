@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Cek Order — DELUNA IDOL
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+</head>
+
+
+<body>
+
+<main class="order-page">
+
+<div class="order-container">
+
+<div class="order-header">
+
+<span>
+DELUNA IDOL
+</span>
+
+<h1>
+CEK ORDER
+</h1>
+
+<p>
+Check your order status
+</p>
+
+</div>
+
+
+<form id="checkForm">
+
+<div class="form-group">
+
+<label>
+Nomor Order
+</label>
+
+<input
+type="text"
+id="orderNumber"
+placeholder="DLN-260813-0001"
+required
+>
+
+</div>
+
+
+<button
+class="order-button"
+type="submit"
+>
+CEK STATUS
+</button>
+
+</form>
+
+
+<div
+id="result"
+class="order-result"
+hidden
+>
+
+<h2>
+ORDER DITEMUKAN
+</h2>
+
+<div id="orderDetail"></div>
+
+</div>
+
+
+</div>
+
+</main>
+
+
+<script src="js/config.js"></script>
+
+<script src="js/check-order.js"></script>
+
+</body>
+
+</html>
